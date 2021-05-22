@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="MainView" customModule="WikiSearch" customModuleProvider="target">
+            <connections>
+                <outlet property="activityIndicator" destination="5vq-ye-4ah" id="Nf8-Y1-EbF"/>
+                <outlet property="bakgroundImageView" destination="ftu-vN-zF6" id="hI9-O4-GHZ"/>
+                <outlet property="noResultsView" destination="0RI-lv-wYD" id="R36-Ij-Pq2"/>
+                <outlet property="searchBar" destination="dgK-cy-OmE" id="gKD-FQ-qBG"/>
+                <outlet property="searchBarTopConstraint" destination="m3t-JU-CFB" id="2H7-YW-AUy"/>
+                <outlet property="tableView" destination="icu-68-EgR" id="TJK-Vi-Oo2"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="nfI-g0-9X3">
+            <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="wiki1" translatesAutoresizingMaskIntoConstraints="NO" id="ftu-vN-zF6">
+                    <rect key="frame" x="0.0" y="44" width="414" height="394"/>
+                </imageView>
+                <searchBar contentMode="redraw" placeholder="Wiki Search" translatesAutoresizingMaskIntoConstraints="NO" id="dgK-cy-OmE">
+                    <rect key="frame" x="0.0" y="429" width="414" height="48"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="48" id="dtQ-Nq-JPK"/>
+                    </constraints>
+                    <textInputTraits key="textInputTraits" returnKeyType="go"/>
+                </searchBar>
+                <activityIndicatorView hidden="YES" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" style="medium" translatesAutoresizingMaskIntoConstraints="NO" id="5vq-ye-4ah">
+                    <rect key="frame" x="354.5" y="443" width="20" height="20"/>
+                </activityIndicatorView>
+                <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="icu-68-EgR">
+                    <rect key="frame" x="0.0" y="477" width="414" height="377"/>
+                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                </tableView>
+                <view alpha="0.0" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="0RI-lv-wYD" customClass="PlaceholderView" customModule="WikiSearch" customModuleProvider="target">
+                    <rect key="frame" x="0.0" y="485" width="414" height="377"/>
+                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                </view>
+            </subviews>
+            <viewLayoutGuide key="safeArea" id="bv6-JH-Bcs"/>
+            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="0RI-lv-wYD" firstAttribute="top" secondItem="dgK-cy-OmE" secondAttribute="bottom" constant="8" id="0Sr-Yv-TPo"/>
+                <constraint firstItem="icu-68-EgR" firstAttribute="leading" secondItem="bv6-JH-Bcs" secondAttribute="leading" id="225-Hk-b3r"/>
+                <constraint firstItem="ftu-vN-zF6" firstAttribute="leading" secondItem="bv6-JH-Bcs" secondAttribute="leading" id="87y-YM-Mbf"/>
+                <constraint firstItem="icu-68-EgR" firstAttribute="width" secondItem="nfI-g0-9X3" secondAttribute="width" id="CF5-AN-O9h"/>
+                <constraint firstItem="bv6-JH-Bcs" firstAttribute="trailing" secondItem="ftu-vN-zF6" secondAttribute="trailing" id="DNW-jk-8VM"/>
+                <constraint firstItem="ftu-vN-zF6" firstAttribute="bottom" secondItem="dgK-cy-OmE" secondAttribute="top" constant="9" id="H8t-df-1JZ"/>
+                <constraint firstItem="dgK-cy-OmE" firstAttribute="centerY" secondItem="bv6-JH-Bcs" secondAttribute="centerY" priority="900" id="HTi-D3-HPY"/>
+                <constraint firstItem="0RI-lv-wYD" firstAttribute="leading" secondItem="bv6-JH-Bcs" secondAttribute="leading" id="IG1-aa-g4F"/>
+                <constraint firstItem="bv6-JH-Bcs" firstAttribute="bottom" secondItem="icu-68-EgR" secondAttribute="bottom" constant="8" id="Lap-fS-vt3"/>
+                <constraint firstItem="0RI-lv-wYD" firstAttribute="width" secondItem="nfI-g0-9X3" secondAttribute="width" id="RAN-Nt-oRt"/>
+                <constraint firstItem="bv6-JH-Bcs" firstAttribute="bottom" secondItem="0RI-lv-wYD" secondAttribute="bottom" id="RV7-gK-7U3"/>
+                <constraint firstItem="ftu-vN-zF6" firstAttribute="top" secondItem="bv6-JH-Bcs" secondAttribute="top" priority="996" id="Vb8-a6-cMj"/>
+                <constraint firstItem="5vq-ye-4ah" firstAttribute="centerX" secondItem="dgK-cy-OmE" secondAttribute="centerX" multiplier="1.76" id="WD5-Fh-2uJ"/>
+                <constraint firstItem="dgK-cy-OmE" firstAttribute="width" secondItem="nfI-g0-9X3" secondAttribute="width" id="d2F-dm-wkK"/>
+                <constraint firstItem="dgK-cy-OmE" firstAttribute="top" secondItem="bv6-JH-Bcs" secondAttribute="top" priority="750" constant="8" id="m3t-JU-CFB"/>
+                <constraint firstItem="icu-68-EgR" firstAttribute="top" secondItem="dgK-cy-OmE" secondAttribute="bottom" symbolic="YES" id="ml9-lr-Nqh"/>
+                <constraint firstItem="dgK-cy-OmE" firstAttribute="centerX" secondItem="bv6-JH-Bcs" secondAttribute="centerX" id="rGC-F4-U17"/>
+                <constraint firstItem="5vq-ye-4ah" firstAttribute="centerY" secondItem="dgK-cy-OmE" secondAttribute="centerY" id="yL9-EE-Ltf"/>
+            </constraints>
+            <point key="canvasLocation" x="126" y="148"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="wiki1" width="892" height="1024"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>

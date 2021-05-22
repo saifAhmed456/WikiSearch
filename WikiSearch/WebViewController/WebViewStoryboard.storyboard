@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15705" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="OXn-nh-37A">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15706"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Web View Controller-->
+        <scene sceneID="gYw-9p-aiO">
+            <objects>
+                <viewController id="OXn-nh-37A" customClass="WebViewController" customModule="WikiSearch" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="JFT-pz-gTl">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jnD-B1-wAA">
+                                <rect key="frame" x="25" y="44" width="44" height="36"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <state key="normal" title="Back"/>
+                            </button>
+                            <wkWebView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="pDj-iw-sAN">
+                                <rect key="frame" x="0.0" y="84" width="414" height="773"/>
+                                <color key="backgroundColor" white="1" alpha="0.84999999999999998" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <wkWebViewConfiguration key="configuration">
+                                    <audiovisualMediaTypes key="mediaTypesRequiringUserActionForPlayback" none="YES"/>
+                                    <wkPreferences key="preferences"/>
+                                </wkWebViewConfiguration>
+                            </wkWebView>
+                            <activityIndicatorView hidden="YES" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" style="large" translatesAutoresizingMaskIntoConstraints="NO" id="WdM-jT-NeI">
+                                <rect key="frame" x="188.5" y="434.5" width="37" height="37"/>
+                            </activityIndicatorView>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="jnD-B1-wAA" firstAttribute="top" secondItem="bSQ-6R-xjJ" secondAttribute="top" id="3SW-Fx-oXr"/>
+                            <constraint firstItem="pDj-iw-sAN" firstAttribute="top" secondItem="jnD-B1-wAA" secondAttribute="bottom" constant="4" id="CTR-SG-RjF"/>
+                            <constraint firstItem="WdM-jT-NeI" firstAttribute="centerX" secondItem="bSQ-6R-xjJ" secondAttribute="centerX" id="GY9-bB-shM"/>
+                            <constraint firstItem="jnD-B1-wAA" firstAttribute="leading" secondItem="bSQ-6R-xjJ" secondAttribute="leading" constant="25" id="MPU-pa-NnR"/>
+                            <constraint firstItem="bSQ-6R-xjJ" firstAttribute="bottom" secondItem="pDj-iw-sAN" secondAttribute="bottom" constant="5" id="QYd-u2-rbB"/>
+                            <constraint firstItem="bSQ-6R-xjJ" firstAttribute="trailing" secondItem="pDj-iw-sAN" secondAttribute="trailing" id="Vtz-39-Te8"/>
+                            <constraint firstItem="WdM-jT-NeI" firstAttribute="centerY" secondItem="bSQ-6R-xjJ" secondAttribute="centerY" id="apL-w8-dqF"/>
+                            <constraint firstItem="pDj-iw-sAN" firstAttribute="leading" secondItem="bSQ-6R-xjJ" secondAttribute="leading" id="bZN-Yb-I0R"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="bSQ-6R-xjJ"/>
+                    </view>
+                    <connections>
+                        <outlet property="backButton" destination="jnD-B1-wAA" id="gVY-Je-yax"/>
+                        <outlet property="spinner" destination="WdM-jT-NeI" id="sbk-WC-ajn"/>
+                        <outlet property="webView" destination="pDj-iw-sAN" id="U5g-Q7-bMb"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="z80-Gf-6zJ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="46" y="143"/>
+        </scene>
+    </scenes>
+</document>
